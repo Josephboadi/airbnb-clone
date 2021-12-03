@@ -5,8 +5,8 @@ const Banner = () => {
     return (
         <>
         {/* <Header/> */}
-        <div className='relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]'>
-            
+        <div className='relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px] top-0'>
+            {/* <Header/> */}
             <Image src="https://links.papareact.com/0fm"
             layout='fill'
             objectFit='cover'

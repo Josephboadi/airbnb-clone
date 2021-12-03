@@ -17,7 +17,10 @@ export default function Home({exploreData, cardsData}) {
 
       {/* <div> */}
         {/* Header */}
+
       <Header/>
+
+      
       {/* Banner */}
       <Banner/>
       {/* </div> */}

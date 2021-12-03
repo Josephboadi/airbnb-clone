@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { 
     GlobeAltIcon,
@@ -18,6 +18,20 @@ function Header({placeholder}) {
     const [endDate, setEndDate] = useState(new Date())
     const [noOfGuests, setNoOfGuests] = useState(1)
     const router = useRouter()
+
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
+        setScrollNav(true);
+        } else {
+        setScrollNav(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeNav);
+    });
 
     const handleSelect = (ranges) => {
         setStartDate(ranges.selection.startDate);
@@ -47,7 +61,7 @@ function Header({placeholder}) {
       }
 
     return (
-        <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'>
+        <header className={`sticky top-0 z-50 grid grid-cols-3  bg-white  shadow-md p-5 md:px-10`}>
             
             {/* left */}
             <div onClick={() => router.push('/')} className='relative flex items-center h-10 cursor-pointer my-auto'>

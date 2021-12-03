@@ -3,6 +3,7 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { format } from "date-fns"
 import { InfoCard } from "../components/InfoCard";
+import Map from "../components/Map";
 
 
 function search({searchResults}) {
@@ -38,6 +39,10 @@ function search({searchResults}) {
                         <InfoCard img={img} location={location} title={title} description={description} star={star} price={price} total={total} />
                     ))}
                     </div>
+                </section>
+                {/* className='hidden xl:inline-flex xl:min-w-[600px]' */}
+                <section className='hidden xl:inline-flex xl:min-w-[600px]' >
+                    <Map searchResults={searchResults}/>
                 </section>
             </main>
             <Footer/>
